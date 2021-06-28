@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+
+        input {
+            margin-bottom: 20px;
+        }
+    }
+}

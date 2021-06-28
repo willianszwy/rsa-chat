@@ -1,0 +1,14 @@
+<nb-layout> 
+    <nb-layout-column class="container">
+        <nb-card>
+            <nb-card-body class="col">
+             <h1>RSA Chat</h1>
+             <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+                <input type="text" nbInput fullWidth shape="rectangle" formControlName="nome" placeholder="Nome" required>
+                <button type="submit" nbButton fullWidth status="primary">Entrar</button>
+             </form>
+              
+            </nb-card-body>
+          </nb-card>
+    </nb-layout-column>
+</nb-layout>

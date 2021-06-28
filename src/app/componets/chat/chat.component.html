@@ -1,0 +1,13 @@
+<nb-chat title="{{(user$ | async)?.username}}" size="giant" [scrollBottom]="true">
+    <nb-chat-message *ngFor="let msg of messages$ | async"
+                     [type]="msg.type"
+                     [message]="msg.text"
+                     [reply]="msg.reply"
+                     [sender]="msg.sender"
+                     [date]="msg.date"
+                     [avatar]="msg.avatar">
+  </nb-chat-message>
+  
+  <nb-chat-form (send)="sendMessage($event)" [dropFiles]="false">
+  </nb-chat-form>
+  </nb-chat>
