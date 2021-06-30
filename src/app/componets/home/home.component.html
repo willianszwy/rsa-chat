@@ -1,7 +1,17 @@
 <nb-layout>
-    <nb-layout-header fixed>RSA Chat</nb-layout-header>
+    <nb-layout-header fixed>
+      <nb-actions size="medium">
+        <nb-action (click)="toggle()" icon="menu-outline" ></nb-action>
+        <nb-action>
+          RSA Chat
+        </nb-action>
+      </nb-actions>
+      <nb-actions size="medium">
+        <nb-action (click)="logoff()" icon="power-outline" ></nb-action>
+      </nb-actions>
+    </nb-layout-header>
   
-    <nb-sidebar>
+    <nb-sidebar tag="sidebar">
       <nb-menu [items]="items">
       </nb-menu>
     </nb-sidebar>

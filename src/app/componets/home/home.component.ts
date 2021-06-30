@@ -4,6 +4,7 @@ import { ChatService } from '@app/services/chat.service';
 import { CryptoService } from '@app/services/crypto.service';
 import { UserService } from '@app/services/user.service';
 import { NbMenuItem } from '@nebular/theme';
+import { NbSidebarService } from '@nebular/theme';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private crypt: CryptoService,
     private chat: ChatService,
-    private userService: UserService) {
+    private userService: UserService,
+    private sidebarService : NbSidebarService) {
 
     userService.usuarios$.subscribe(users => {
       let _items: NbMenuItem[] = [];
@@ -45,6 +47,15 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  toggle() {
+    this.sidebarService.toggle(false, 'sidebar')
+  }
+
+  logoff() {
+    window.localStorage.clear();
+    window.location.reload();
   }
 
 }

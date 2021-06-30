@@ -7,7 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NbCardModule, NbInputModule, NbThemeModule } from '@nebular/theme';
-import { NbSidebarModule, NbLayoutModule, NbButtonModule, NbChatModule, NbMenuModule } from '@nebular/theme';
+import { NbSidebarModule, NbLayoutModule, NbButtonModule, NbChatModule, NbMenuModule,NbIconModule,NbActionsModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { environment } from '@env/environment';
 import { ChatComponent } from './componets/chat/chat.component';
@@ -46,7 +47,10 @@ const config: SocketIoConfig = {
     NbCardModule,
     NbInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NbIconModule,
+    NbEvaIconsModule,
+    NbActionsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

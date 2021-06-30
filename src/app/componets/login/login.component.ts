@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {    
     this.chatService.setUsername(this.loginForm.value.nome);
     
-    setTimeout(() => window.location.reload(), 2000);
+    setTimeout(() => window.location.reload(), 1000);
   }
 
 }

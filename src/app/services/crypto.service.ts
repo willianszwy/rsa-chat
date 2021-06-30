@@ -20,7 +20,7 @@ export class CryptoService {
       })
     }
 
-    const keys = JSON.parse(localStorage.getItem("Key") || "");
+    const keys = JSON.parse(localStorage.getItem("Key") || "{}");
     this.publicKey = keys.publicKey;
     this.privateKey = keys.privateKey;
   }
